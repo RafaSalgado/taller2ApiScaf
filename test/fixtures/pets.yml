@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_mascota: MyString
+  edad: 1
+  genero: MyString
+  caracteristicas: MyText
+
+two:
+  nombre_mascota: MyString
+  edad: 1
+  genero: MyString
+  caracteristicas: MyText

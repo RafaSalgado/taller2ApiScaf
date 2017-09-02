@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170902023056) do
+ActiveRecord::Schema.define(version: 20170902035440) do
+
+  create_table "cars", force: :cascade do |t|
+    t.string "modelo"
+    t.string "marca"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "nombre"
@@ -21,10 +29,43 @@ ActiveRecord::Schema.define(version: 20170902023056) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "countries", force: :cascade do |t|
+    t.string "pais"
+    t.string "ciudad"
+    t.string "direccion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "nota", force: :cascade do |t|
     t.string "titulo"
     t.date "fecha"
     t.text "nota"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.string "nombre_mascota"
+    t.integer "edad"
+    t.string "genero"
+    t.text "caracteristicas"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.string "precio"
+    t.string "categoria"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "residencia", force: :cascade do |t|
+    t.string "tipo"
+    t.integer "pisos"
+    t.text "estado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
